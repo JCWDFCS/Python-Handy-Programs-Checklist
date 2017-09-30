@@ -1,1 +1,1 @@
-Collect practical and effective programs.
+Compose practical and effective programs.
