@@ -77,5 +77,72 @@
 
 
 
+#### Combine files:
 
+[Python concatenate text files - Stack Overflow](https://stackoverflow.com/questions/13613336/python-concatenate-text-files/13613375#13613375)
+
+
+
+> This should do it
+>
+> **For large files:**
+>
+> ```python
+> filenames = ['file1.txt', 'file2.txt', ...]
+> with open('path/to/output/file', 'w') as outfile:
+>     for fname in filenames:
+>         with open(fname) as infile:
+>             for line in infile:
+>                 outfile.write(line)
+> ```
+>
+> **For small files:**
+>
+> ```python
+> filenames = ['file1.txt', 'file2.txt', ...]
+> with open('path/to/output/file', 'w') as outfile:
+>     for fname in filenames:
+>         with open(fname) as infile:
+>             outfile.write(infile.read())
+> ```
+>
+> **… and another interesting one that I thought of**:
+>
+> ```python
+> filenames = ['file1.txt', 'file2.txt', ...]
+> with open('path/to/output/file', 'w') as outfile:
+>     for line in itertools.chain.from_iterable(itertools.imap(open, filnames)):
+>         outfile.write(line)
+> ```
+>
+> Sadly, this last method leaves a few open file descriptors, which the GC should take care of anyway. I just thought it was interesting
+
+---
+
+> Use `shutil.copyfileobj`. It should be more efficient.
+
+> ```python
+> with open('output_file.txt','wb') as wfd:
+>     for f in ['seg1.txt','seg2.txt','seg3.txt']:
+>         with open(f,'rb') as fd:
+>             shutil.copyfileobj(fd, wfd, 1024*1024*10)
+>             #10MB per writing chunk to avoid reading big file into memory.
+> ```
+
+> 
+>
+> ---
+>
+> would be a bit shorter:
+>
+> ```python
+> import glob
+> import fileinput
+> import os
+>
+> pat = os.path.expanduser('~/Documents/*.md')
+> with open('single-file.md', 'w') as fout:
+>     for line in sorted(fileinput.input(glob.glob(pat))):
+>         fout.write(line)
+> ```
 
