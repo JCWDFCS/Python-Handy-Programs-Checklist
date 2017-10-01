@@ -1,4 +1,8 @@
+#### Move files:
 
+> Diagram Checklist
+>
+> <img src='../images/python-handy-programs/move-files.JPG' width='500'>
 
 #### Fibonacci:
 
