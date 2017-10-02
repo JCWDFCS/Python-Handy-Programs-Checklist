@@ -20,10 +20,12 @@ def move_files(wildcard_ext,src_path,dst_path):
     src_files = filter_files(wildcard_ext,src_path)
     cmd = 'mv %s %s'
     for file in src_files:
-        print(dst_path + wildcard_ext)
+        # print the dst path for later manipulating.
+        print(dst_path + file[len(src_path):])
         os.popen(cmd %(file, dst_path))
 
 def main():
+    # Move images from downloads folder to diary images folers
     download_path =    '/Users/gaowei/Downloads/'
     diary_images_path ='/Users/gaowei/Documents/Diary/images/'
     image_ext =        '*.JPG'

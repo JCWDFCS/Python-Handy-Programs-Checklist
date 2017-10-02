@@ -1,6 +1,15 @@
 #### Move files:
 
-> Diagram Checklist
+> 2017-10-02
+>
+> Move multiple files to 
+>
+> 1. Change to the working directory
+> 2. Filter(or select) files
+> 3. Using pipes(command) to move single files
+> 4. Using iterating to move multiple  
+
+> Diagram Checklist 2017-10-01
 >
 > <img src='../images/python-handy-programs/move-files.JPG' width='500'>
 
