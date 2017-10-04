@@ -1,8 +1,40 @@
+
+
+#### Km Per Liter
+
+> Output:
+
+> ```python
+> The Kilometers Per Liter Program
+> =============================================
+> Please enter liters of gas used:	8
+> Please enter kilometers driven: 	100
+> Please enter cost per liter: 		6.3
+> =============================================
+> Kilometers Per Liter: 			12.5
+> Cost Per 100Kms: 			50.4
+>
+> ```
+
+> | 地 区                                      | 90号汽油      | 93号汽油      | 97号汽油      | 0号柴油 | 报价时间               |
+> | ---------------------------------------- | ---------- | ---------- | ---------- | ---- | ------------------ |
+> | [北京](http://ny.gold600.com/beijing.html) | 5.88(京89号) | 6.28(京92号) | 6.68(京95号) | 5.92 | 2017-10-4 10:50:10 |
+
+> 中国车用汽油有无铅和含铅的两类。无铅的辛烷值有90、93和95RON(研究法)车用汽油三种。含铅的辛烷值有90、93和97RON三种。其中90号的铅含量不超过0.35g/L，93和97的铅含量不超过0.45g/L。
+>
+> ```
+> 根据《北京市出租汽车价格标准》
+> 3公里以内13元，基本单价每公里2.3元。燃油附加费每运次1元。23点（含）至次日5点（不含）运营时，基本单价加收20%的费用。
+> 所以不论白天晚上3公里以内加上燃油附加费一共是14元。
+> ```
+
+> 1.6L排量的捷达,新车8个油,50元百公里.市区9个油.
+
 #### Move files:
 
 > 2017-10-02
 >
-> Move multiple files to 
+> Move multiple files to
 >
 > 1. Change to the working directory
 > 2. Filter(or select) files
@@ -47,11 +79,11 @@
 > ```python
 > known = {0:0, 1:1}
 >
-> def fibonacci(n): 
->   if n in known: 
+> def fibonacci(n):
+>   if n in known:
 >     return known[n]
->   res = fibonacci(n-1) + fibonacci(n-2) 
->   known[n] = res 
+>   res = fibonacci(n-1) + fibonacci(n-2)
+>   known[n] = res
 >   return res
 >
 >
@@ -142,9 +174,9 @@
 >             #10MB per writing chunk to avoid reading big file into memory.
 > ```
 
-> 
 >
-> ---
+>
+>---
 >
 > would be a bit shorter:
 >
@@ -159,3 +191,30 @@
 >         fout.write(line)
 > ```
 
+
+
+### Problems:
+
+循环结构的设置.
+
+> ```python
+> option = 'y'
+>     while option.lower() == 'y':
+>
+> def main():
+>     display_menu()
+>     liters_used, kms_driven, cost_per_liter = get_entries()
+>     km_per_liter, cost_per_km = calculate_results(liters_used, kms_driven, cost_per_liter)
+>     cost_per_100kms = cost_per_km * 100
+>     # display the result
+>     print("=============================================")
+>     print("Kilometers Per Liter: \t\t\t" + str(km_per_liter))
+>     print("Cost Per 100Kms: \t\t\t" + str(cost_per_100kms))
+>     print()
+>     print('Bye')
+>     option = input('Do you continue?:(Y/N) ')
+>     if option == 'y':
+>         continue
+> ```
+>
+> 
