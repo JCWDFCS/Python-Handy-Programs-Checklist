@@ -193,6 +193,32 @@
 
 
 
+#### future value
+
+> seperate the interest amount and the principle
+>
+> ```python
+> def calculate_future_value(monthly_investment, yearly_interest_rate, years=20):
+>     #convert the yearly values to monthly values.
+>     print('Entering calculate_future_value():')
+>     monthly_interest_rate = yearly_interest_rate / 12 / 100
+>     months = years * 12
+>     #calculate future value,initialize the future value.
+>     future_value = 0.0
+>     for i in range(0, months):
+>         monthly_interest_amount = future_value * monthly_interest_rate
+>         future_value += monthly_investment
+>         future_value += monthly_interest_amount
+>         print('month = ', i,'future value = ',round(future_value,2))
+>         if i % 12 == 0:
+>             print('year =', i/12, 'future value = ', round(future_value,2))
+>     return future_value
+> ```
+>
+> 
+
+
+
 ### Problems:
 
 循环结构的设置.
