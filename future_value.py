@@ -18,6 +18,36 @@ def calculate_future_value(monthly_investment, yearly_interest_rate, years=20):
     return future_value
 
 
+def find_payment(loan, r, m):
+    """Assumes: loan and r are floats, m an int
+        Returns the monthly payment for a mortgage of size
+        loan at a monthly rate of r for m months"""
+    return loan*(1+r)**m * (r/((1+r)**m-1))
+
+class Mortgage(object):
+    """Abstract class for building different kinds of mortgage"""
+    def __init__(self, loan, annRate, months):
+        """Assumes:loan and annRate are floats, months an int
+            Creates a new mortgage of size loan, duration months,and annual rate annRate"""
+        self.loan = loan
+        self.rate = annRate/12
+        self.months = months
+        self.paid = [0]
+        self.outstanding = [loan]
+        self.payment = find_payment(loan, self.rate, months)
+        self.legend = None #discription of mortgage
+    def makePayment(self):
+        """Make a payment"""
+        self.paid.append(self.payment)
+        reduction = self.payment - self.outstanding[-1]*self.rate
+        self.outstanding.append(self.outstanding[-1] - reduction)
+    def get_total_paid(self):
+        """Return the total amount paid so far"""
+        return sum(self.paid)
+    def __str__(self):
+        return self.legend
+
+
 def main():
     choice = 'y'
     while choice.lower() == 'y':
