@@ -12,7 +12,7 @@ if customer_type.lower() == 'r':
     elif invoice_total >= 250 and invoice_total < 500:
         discount_percent = 0.2
     elif invoice_total >= 500:
-        discount_percent = 0.25
+        discount_percednt = 0.25
 
 elif customer_type.lower() == 'w':
     if invoice_total > 0 and invoice_total < 500:
