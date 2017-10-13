@@ -120,7 +120,9 @@
 >
 > 
 
+#### hotel-reservation
 
+> 需要进一步做 type_based_dispatch 处理
 
 #### Combine files:
 
@@ -220,6 +222,12 @@
 #### temperature
 
 > The **Fahrenheit scale** is a [temperature scale](https://en.wikipedia.org/wiki/Scale_of_temperature) based on one proposed in 1724 by Amsterdam-based physicist [Daniel Gabriel Fahrenheit](https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit) (1686–1736), after whom the scale is named.[[1\]](https://en.wikipedia.org/wiki/Fahrenheit#cite_note-1) It uses the **degree Fahrenheit** (symbol: °F) as the unit. Several accounts of how he originally defined his scale exist. The lower defining point, 0 °F, was established as the [temperature](https://en.wikipedia.org/wiki/Temperature) of a solution of [brine](https://en.wikipedia.org/wiki/Brine) made from equal parts of ice and salt. Further limits were established as the melting point of ice (32 °F) and his best estimate of the average [human body temperature](https://en.wikipedia.org/wiki/Human_body_temperature) (96 °F, about 2.6 °F less than the modern value due to a later redefinition of the scale).[[2\]](https://en.wikipedia.org/wiki/Fahrenheit#cite_note-2) The scale is now usually defined by two fixed points: the temperature at which [water](https://en.wikipedia.org/wiki/Water) freezes into [ice](https://en.wikipedia.org/wiki/Ice) is defined as 32 °F, and the boiling point of water is defined to be 212 °F, a 180 °F separation, as defined at sea level and standard atmospheric pressure.
+
+
+
+#### [Make a pretty table in Python 3.4 without add-ons](https://stackoverflow.com/questions/26351672/make-a-pretty-table-in-python-3-4-without-add-ons)
+
+
 
 
 
