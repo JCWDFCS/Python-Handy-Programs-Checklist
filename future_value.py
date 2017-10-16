@@ -64,17 +64,3 @@ def main():
 
 if __name__ == "__main__":
      main()
-
-[file.replace('-','_') for file in py_files]
-
-[file.replace('-','_') for file in py_files]
-
-map(lambda i,j:os.rename(i,j),zip(py_files,dst_py_files))
-
-for file in py_files:
-    os.rename(file, file.replace('-','_'))
-
-or
-des_py_file = [file.replace('-','_') for file in py_file ]
-for i, j in zip(py_files, dst_py_files:
-    os.rename(i,j)
