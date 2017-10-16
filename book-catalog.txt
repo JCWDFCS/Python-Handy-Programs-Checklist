@@ -1,0 +1,1 @@
+{'Think Python': {'author': 'Allen B Downey', 'press': "O'Relly", 'pubyear': '2015'}, 'Murach Python Programming': {'author': 'Jol Murach', 'press': 'Murach ', 'pubyear': '2016'}}
